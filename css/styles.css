@@ -172,7 +172,6 @@ h2 {
 
 p {
 	color: var(--white);
-	margin
 }
 
 
@@ -231,7 +230,7 @@ button {
 }
 
 .hireme-btn, .resume-btn {
-	color: var(--black));
+	color: var(--black);
 	background-color: var(--white);
 }
 
@@ -250,4 +249,11 @@ button {
 	color: var(--white);
 	background-color: var(--primary);
 	border: 4px solid var(--primary);
+}
+
+/* About Me Section */
+
+.profile-img {
+	border-radius: 50%;
+	width: 200px;
 }
