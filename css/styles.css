@@ -14,8 +14,23 @@
 
 }
 
+/* CSS Animations */
+
 html {
 	scroll-behavior: smooth;
+}
+
+.hidden {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(-100%);
+	transition: all 1.5s;
+}
+
+.show {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateX(0);
 }
 
 /* Navigation Styles */
@@ -133,6 +148,14 @@ nav ul li a:hover {
 section{
 	min-height: 100vh;
 	padding: 3rem;
+}
+
+section:not(:first-child) {
+	display: grid;
+	place-items: center;
+	align-content: center;
+	min-height: 100vh;
+	text-align: center;
 }
 
 /* section:not(:first-child) {
@@ -254,6 +277,22 @@ button {
 /* About Me Section */
 
 .profile-img {
-	border-radius: 50%;
+	border-radius: 30%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3rem;
 	width: 200px;
+	text-align: center;
+}
+
+
+
+
+
+/* Media Queries */
+@media(prefers-reduced-motion) {
+	.hidden {
+		transition: none;
+	}
 }
