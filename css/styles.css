@@ -27,11 +27,6 @@ html {
 	transition: all 1.5s;
 }
 
-.show {
-	opacity: 1;
-	filter: blur(0);
-	transform: translateX(0);
-}
 
 /* Scroll Bar Styles */
 html {
@@ -79,24 +74,39 @@ nav {
 	align-items: center;
 }
 
+nav ul {
+	/* added */
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	/* background: 151516; */
+	top: 80px;
+	left: -100%;
+	text-align: center;
+	transition: all .5s;
+}
+
 nav ul li {
 	display: inline;
 	text-align: center;
 }
 
 nav ul li a {
+	display: block; /* added */
 	text-align: center;
 	text-decoration: none;
 	color: var(--primary);
 	font-family: 'Space Mono', monospace; 
 	font-size: 20px;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin: 50px; /* added */
+
+	/* margin-left: 5px;
+	margin-right: 5px; */
 	cursor: pointer;
 }
 
 nav ul li a:hover {
-	background: var(--light-purple);
+	/* background: var(--light-purple); */
 	color: var(--white);
 	transition: color .5s ease-in;
 	transition: background .8s ease;
@@ -106,24 +116,31 @@ nav ul li a:hover {
 	color: var(--white);
 }
 
+nav ul.show {
+	/* added */
+	left: 0;
+}
+
+
+
 /* Mobile Toggle Navigation */ 
 
-/* nav {
+nav {
 	
 	position: relative;
-} */
+}
 
-/* #navlinks {
-	display: none;
-	background: gray;
-} */
+#navlinks {
+	/* display: none; */
+	/* background: gray; */
+}
 
-/* nav a {
+nav a {
 	padding: 14px 16px;
 	display: block;
-} */
+}
 
-.offcanvas-menu {
+/* .offcanvas-menu {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -134,7 +151,12 @@ nav ul li a:hover {
 	align-items: center;
 	transform: translateX(100%); 
 	transition: all .4s ease;
-}
+} */
+
+
+
+
+
 
 
 /* Mobile Hamburger Menu */
@@ -251,7 +273,7 @@ p {
 
 /* Hero Section */
 .hero-container {
-	margin-top: 10rem;
+	padding-top: 10rem;
 }
 
 h1 {
@@ -342,8 +364,33 @@ button {
 
 
 /* Media Queries */
+
 @media(prefers-reduced-motion) {
 	.hidden {
 		transition: none;
 	}
+}
+
+@media (min-width: 768px) {
+
+	.menu-btn {
+		display: none;
+	}
+
+	nav ul {
+		top: 0;
+		left: 0;
+		display: flex;
+		position: relative;
+		height: 1%;
+		padding-left: 0px;
+		margin-bottom: 0px;
+	}
+
+	nav ul li a {
+		margin: 0px;
+		/* padding: 24px 0; */
+	}
+	
+	
 }
