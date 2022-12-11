@@ -12,8 +12,14 @@ menuBtn.addEventListener("click", () => {
 });
 
 // Mobile Hamburger Menu Toggle
-$(document).ready(function(){
-  $('#menu-btn').click(function(){
-   $('ul').toggleClass('show');
+$(document).ready(function () {
+  $("#menu-btn").click(function () {
+    $("ul").toggleClass("show");
   });
- });
+});
+
+$(document).ready(function () {
+  $("nav ul li a").click(function () {
+    $("ul").removeClass("show");
+  });
+});

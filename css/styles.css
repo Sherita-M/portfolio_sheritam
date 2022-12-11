@@ -121,7 +121,15 @@ nav ul.show {
 	left: 0;
 }
 
-
+.menu{
+	height: 0;
+	overflow: hidden;
+	transition: height 0.3s;
+      }
+      
+.open{
+	height: 295px;
+      }
 
 /* Mobile Toggle Navigation */ 
 
@@ -277,14 +285,16 @@ p {
 }
 
 h1 {
+	display: flex;
+	flex-direction: column;
 	font-family: 'Space Mono', monospace;
-	font-size: 70px;
+	font-size: 70px; /* 115px for Desktop */
 	color: var(--white);
 }
 
 h1 span {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 115px;
+	font-size: 75px;
 	font-weight: 700;
 	color: var(--primary);
 }
@@ -294,7 +304,7 @@ h1 span {
 	overflow: hidden;
 	border-right: .15em solid yellow;
 	white-space: nowrap;
-	font-size: 1.5rem;
+	font-size: 1rem; /* 1.5rem for Desktop */
 	width: 0;
 	animation: 
 		typing 3s steps(25, end) forwards,
@@ -316,13 +326,23 @@ h1 span {
 }
 
 button {
-	padding: 1em 3rem;
-	margin-top: 2rem;
-	margin-right: 1rem;
+	margin: 2rem 1rem 0 0;
+	padding: 1rem 1rem;
 	border: 4px solid transparent;
 	/* border-radius: .5rem; */
 	font-size: 1rem;
 	cursor: pointer;
+	
+}
+
+.cta-btns {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.hireme-btn {
+	margin-right: 1rem;
 }
 
 .hireme-btn, .resume-btn {
