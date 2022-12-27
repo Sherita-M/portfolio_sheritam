@@ -24,3 +24,9 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $(".logo a").click(function () {
+    $("ul").removeClass("show");
+  });
+});
+

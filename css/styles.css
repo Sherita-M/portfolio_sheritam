@@ -267,7 +267,7 @@ section:nth-child(5) {
 } */
 
 h2 {
-	margin-bottom: 2rem;
+	/* margin-bottom: 3rem; */
 	text-align: center;
 	font-size: 4rem;
 	color: var(--primary);
@@ -379,7 +379,43 @@ button {
 	text-align: center;
 }
 
+/* Skills Section */
 
+.skills-container {
+	width: 70%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
+}
+
+.skills-list {
+	color: var(--white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 20%;
+	border: 2px solid var(--secondary) ;
+	padding: 1rem;
+	margin-top: 2rem;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.skills-list:hover {
+	background-color: var(--primary);
+	border-color: var(--white);
+	transition: all 0.3s;
+}
+
+
+/* Portfolio Section */
+
+.card {
+	margin-bottom: 7rem;
+}
 
 
 
