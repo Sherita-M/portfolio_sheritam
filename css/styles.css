@@ -54,10 +54,12 @@ html {
 header {
 	position: sticky;
 	top: 0px;
+	margin-top: .5rem;
 	padding: 1.5rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	z-index: 1;
 }
 
 .logo a {
@@ -112,9 +114,9 @@ nav ul li a:hover {
 	transition: background .8s ease;
 }
 
-.active {
+/* .active {
 	color: var(--white);
-}
+} */
 
 nav ul.show {
 	/* added */
@@ -270,12 +272,14 @@ section:nth-child(5) {
 h2 {
 	/* margin-bottom: 3rem; */
 	text-align: center;
-	font-size: 4rem;
+	font-size: calc(1.325rem + .9vw);
+	margin-bottom: 2rem;
 	color: var(--primary);
 }
 
 p {
 	color: var(--white);
+	margin-bottom: 1rem;
 }
 
 
@@ -287,10 +291,12 @@ p {
 h1 {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 1rem;
 	font-family: 'Space Mono', monospace;
-	font-size: 70px; /* 115px for Desktop */
+	font-size: calc(1.375rem + 1.5vw);
 	color: var(--white);
 }
+
 
 h1 span {
 	font-family: 'Montserrat', sans-serif;
@@ -306,6 +312,7 @@ h1 span {
 	white-space: nowrap;
 	font-size: 1rem; /* 1.5rem for Desktop */
 	width: 0;
+	height: 2em;
 	animation: 
 		typing 3s steps(25, end) forwards,
 		blink .8s infinite;
@@ -326,7 +333,7 @@ h1 span {
 }
 
 button, #clear, #submit {
-	margin: 2rem 1rem 0 0;
+	/* margin: 2rem 1rem 0 0; */
 	padding: 1rem 1rem;
 	border: 4px solid transparent;
 	/* border-radius: .5rem; */
@@ -350,9 +357,19 @@ button, #clear, #submit {
 	background-color: var(--white);
 }
 
-.hireme-btn:hover {
+.hireme-btn a {
+	background-color: var(--white);
+	text-decoration: none;
+	color: black;
+}
+
+
+
+.hireme-btn:hover, .hireme-btn a:hover {
 	color: var(--white);
 	background-color: var(--primary);
+	transition: all .1s ease-in;
+
 }
 
 .resume-btn, #clear {
@@ -365,6 +382,7 @@ button, #clear, #submit {
 	color: var(--white);
 	background-color: var(--primary);
 	border: 4px solid var(--primary);
+	transition: all .1s ease-in;
 }
 
 /* About Me Section */
@@ -379,6 +397,8 @@ button, #clear, #submit {
 	text-align: center;
 }
 
+
+
 /* Skills Section */
 
 .skills-container {
@@ -386,7 +406,7 @@ button, #clear, #submit {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 	
 }
 
@@ -467,7 +487,7 @@ img {
 
 .overlay-text {
 	position: relative;
-	top: -170px;
+	top: -180px;
 }
 
 .button {
@@ -485,7 +505,7 @@ img {
 a.button:hover, #submit:hover {
 	background-color: var(--primary);
 	color: white;
-	transform: all .3s;
+	transition: all .3s;
 }
 
 .cropped {
@@ -493,7 +513,7 @@ width: 400px;
 height: 400px; 
 text-align: center;
 object-fit: cover;
-object-position: 0 -15%; 
+/* object-position: 0 -15%;  */
 }
 
 /* Contact Me Section */
@@ -565,18 +585,34 @@ footer {
 		/* padding: 24px 0; */
 	}
 
+	.hero-container {
+		text-align: center;
+	}
+
+	.cta-btns {
+		justify-content: center;
+	}
+
+	.about-text {
+		font-size: calc(1rem + .2vw);
+		max-width: 1000px;
+	}
+
 	.projects {
 		display: flex;
 		gap: 4rem;
-		width: 50%;
+		width: 100%;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
+	
+	
+}
 
-	.cards {
-		max-width: 252px;
-		max-height: 252px;
-	}
+
+@media (min-width: 1024px) {
 
 	
+
 	
 }

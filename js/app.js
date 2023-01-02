@@ -31,16 +31,14 @@ $(document).ready(function () {
   });
 });
 
-
 // Mobile Hamburger Menu Animation Open and Close When Links are Clicked
-$('nav ul li > a,.menu-btn').click(function () {
+$("nav ul li > a,.menu-btn").click(function () {
   console.log("clicked");
-  $('body').toggleClass('show');
-  if ($('body').hasClass('show')) {
-      $('.menu-btn').addClass("open");
+  $("body").toggleClass("show");
+  if ($("body").hasClass("show")) {
+    $(".menu-btn").addClass("open");
   } else {
-      $('.menu-btn').removeClass("open");
+    $(".menu-btn").removeClass("open");
   }
 });
-
 
