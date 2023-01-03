@@ -41,4 +41,3 @@ $("nav ul li > a,.menu-btn").click(function () {
     $(".menu-btn").removeClass("open");
   }
 });
-
